@@ -168,6 +168,8 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (indexPath.item == self.currentIndex) { return; }
+    
     [self.buttonBarView moveToIndex:indexPath.item animated:YES swipeDirection:XLPagerTabStripDirectionNone];
     self.shouldUpdateButtonBarView = NO;
     
