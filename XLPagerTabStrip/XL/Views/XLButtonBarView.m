@@ -160,7 +160,7 @@
 -(UIView *)selectedBar
 {
     if (_selectedBar) return _selectedBar;
-    _selectedBar = [[UIView alloc] initWithFrame:CGRectMake(0, self.frame.size.height - 5, self.frame.size.width, 5)];
+    _selectedBar = [[UIView alloc] initWithFrame:CGRectZero];
     _selectedBar.layer.zPosition = 9999;
     _selectedBar.backgroundColor = [UIColor blackColor];
     return _selectedBar;
